@@ -23,7 +23,7 @@ def turn(board)
 end
     move(board, index)
     display_board(board)
-  end
+end
 
 def valid_move?(board, index)
   if position_taken?(board, index) == false && index.between?(0,8) == true
