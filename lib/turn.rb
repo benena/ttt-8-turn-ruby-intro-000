@@ -20,10 +20,10 @@ def turn(board)
   index = input_to_index(input)
   while valid_move?(board, index) == false
   puts "Please enter 1-9:"
+end
     move(board, index)
     display_board(board)
   end
-end
 
 def valid_move?(board, index)
   if position_taken?(board, index) == false && index.between?(0,8) == true
