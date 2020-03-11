@@ -15,14 +15,12 @@ def move(array, index, me = "X")
 end
 
 def turn(board)
+  while valid_move?(board, index) == false
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  while valid_move?(board, index) == false
-    move(board, index)
-    display_board(board)
-  else 
-    turn(board)
+  move(board, index)
+  display_board(board)
   end
 end
 
